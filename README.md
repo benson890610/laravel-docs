@@ -45,5 +45,24 @@ tasks.store
 tasks.update 
 tasks.destroy
 
+```  
+  
+  
+### Pass dynamic variables to view  
+  
+```
+
+public function index() {
+
+    $title = 'Home Page';
+    $paragraph = 'New example of paragraph created today';
+    
+    return view('pages.index', [
+        'title' => $title,
+        'paragraph' => $paragraph
+    ]);
+
+}
+
 ```
 
