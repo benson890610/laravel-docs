@@ -1,29 +1,20 @@
 # laravel-docs
 Laravel documentation for learning  
+  
+  
+## Laravel routing  
+  
+  
+  
 
-### Install laravel globaly  
+### Create routes options  
   
 ```
 
-composer global require "laravel/installer"
+Route::get('/', function(){ return 'Home Page' });     // Basic GET route
+Route::get('/', 'HomeController@index')                // 5.5 version controller routes
+Route::get('/', [HomeController::class, 'index']);     // Newer version controller routes
 
-```
-  
-  
-### Create latest version or with specific version project   
-  
-```
-composer create-project laravel/laravel app_name
-composer create-project laravel/laravel "5.5.*" app_name --prefer-dist
-
-```
-  
-  
-### Laravel commands  
-  
-```
-
-laravel new app_name // Create new application  
-laravel -v           // Check laravel installer version
+Route::get('/about', [HomeController::class, 'about'])->name('home.about') // Naming routes 
 
 ```
