@@ -34,4 +34,14 @@ Laravel documentation for learning
 @endsection
 
 
+```  
+  
+  
+### Show dynamic variable from controller  
+  
+```
+
+<h1>This is {{ $title }}</h1>
+<p>This is {{ $paragraph }}</p>
+
 ```
