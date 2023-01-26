@@ -16,10 +16,19 @@ php artisan serve // http://127.0.0.1:8000
 ```  
   
   
-## Create basic controller  
+### Create basic controller  
   
 ```
 
 php artisan make:controller HomeController
+
+```  
+  
+  
+### Show all available routes  
+  
+```
+
+php artisan route:list
 
 ```
