@@ -26,4 +26,14 @@ return response()->json([
     'message' => 'Json response handled'
 ], 200, $headers);
 
+```  
+
+### asset() helper  
+  
+```
+
+// asset() helper automaticaly looks in public folder for other folders or files
+
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 ```
