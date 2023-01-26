@@ -9,7 +9,7 @@ Laravel documentation for learning
   
 ```
 
-php artisan make:controller TasksController // Simple controller 
+php artisan make:controller TasksController            // Simple controller 
 php artisan make:controller TasksController --resource // Resources controller
 
 ```  
@@ -21,7 +21,7 @@ php artisan make:controller TasksController --resource // Resources controller
 
 // routes/web.php  
 
-TasksController::get('tasks/export', 'TasksController@export');
+TasksController::get('tasks/export', 'TasksController@export')->name('tasks.export');
 TasksController::resource('tasks',   'TasksController');
 
 // Method names
