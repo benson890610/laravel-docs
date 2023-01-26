@@ -1,2 +1,8 @@
 # laravel-docs
-Laravel documentation for learning
+Laravel documentation for learning  
+  
+  
+## Controllers  
+  
+  
+
