@@ -12,4 +12,13 @@ Laravel documentation for learning
 
 php artisan serve // http://127.0.0.1:8000
 
+```  
+  
+  
+## Create basic controller  
+  
+```
+
+php artisan make:controller HomeController
+
 ```
