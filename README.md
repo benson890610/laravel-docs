@@ -28,4 +28,23 @@ Route::group(['middlware' => 'auth'], function() {
     Route::resource('orders', 'OrdersController');
 }); 
 
+```  
+  
+  
+### Prefix routes  
+  
+```
+
+Route::group(['prefix' => 'home'], function() {
+    Route::get('/', 'HomeController@index');
+    Route::get('/about', 'HomeController@about');
+    Route::get('/contact', 'HomeController@contact);
+});
+
+Route::group(['middlware' => 'auth', 'prefix' => 'home'], function() {
+    Route::get('/', 'HomeController@index');
+    Route::get('/about', 'HomeController@about');
+    Route::get('/contact', 'HomeController@contact);
+});
+
 ```
