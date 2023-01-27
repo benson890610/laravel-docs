@@ -44,4 +44,13 @@ Laravel documentation for learning
 <h1>This is {{ $title }}</h1>
 <p>This is {{ $paragraph }}</p>
 
+```  
+  
+  
+### Include other file  
+  
+```
+
+  @include('inc.navbar')
+
 ```
