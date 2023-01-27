@@ -47,4 +47,19 @@ Route::group(['middlware' => 'auth', 'prefix' => 'home'], function() {
     Route::get('/contact', 'HomeController@contact);
 });
 
+```  
+  
+  
+### Namespacing and prefix routes  
+  
+```
+
+// Http\Controller\User\RegisterController.php
+// Http\Controlller\User\LoginController.php
+
+Route::group(['prefix' => 'user', 'namespace' => 'User'], function() {
+    Route::get('/passwordForgot', 'RegisterController@passwordForgot');
+    Route::get('/login', 'LoginController@logout');
+});
+
 ```
