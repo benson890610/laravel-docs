@@ -62,4 +62,17 @@ Route::group(['prefix' => 'user', 'namespace' => 'User'], function() {
     Route::get('/login', 'LoginController@logout');
 });
 
+```  
+  
+  
+### Name grouping  
+  
+```
+
+Route::group(['as' => 'home.'], function() {
+    Route::get('/', 'HomeController@index')->name('index');           // home.index
+    Route::get('/about', 'HomeController@about')->name('about);       // home.about
+    Route::get('/contact', 'HomeController@contact')->name('contact); // home.contact
+});
+
 ```
