@@ -17,4 +17,15 @@ Route::get('/', [HomeController::class, 'index']);     // Newer version controll
 
 Route::get('/about', [HomeController::class, 'about'])->name('home.about') // Naming routes 
 
+```  
+  
+  
+### Grouping routes by middleware  
+  
+```
+
+Route::group(['middlware' => 'auth'], function() {
+    Route::resource('orders', 'OrdersController');
+}); 
+
 ```
