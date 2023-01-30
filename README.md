@@ -15,6 +15,7 @@ composer global require "laravel/installer"
 ```
 composer create-project laravel/laravel app_name
 composer create-project laravel/laravel "5.5.*" app_name --prefer-dist
+composer create-project laravel/laravel myproject --prefer-dist v5.5.*
 
 ```
   
