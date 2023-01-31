@@ -74,4 +74,16 @@ Laravel documentation for learning
     // Create <input type="hidden" name="_token" value="WQEQWasd1212dasdCZSXAADGGG002">
 </form>
 
+```  
+  
+  
+### Method field  
+  
+```
+
+// Request method as PUT
+<form action="#" method="post">
+    {{ method_field('PUT') }}
+</form>
+
 ```
