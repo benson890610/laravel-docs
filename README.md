@@ -104,4 +104,17 @@ Route::get('/user/{id}/{name}', function($id, $name) {
   echo $name;
 })->where('id' => '[0-9]+', 'name' => '[a-zA-Z]+');
 
+```  
+  
+  
+### Route model binding  
+  
+```
+
+Route::get('/user/{user}', function(App\User $user) {
+    echo $user->id;
+    echo $user->email;
+    echo $user->is_active;
+});
+
 ```
