@@ -53,4 +53,25 @@ Laravel documentation for learning
 
   @include('inc.navbar')
 
+```  
+  
+  
+### CSRF Token  
+  
+```
+
+<form action="#" method="post">
+    {{ csrf_field() }}
+    // Create <input type="hidden" name="_token" value="WQEQWasd1212dasdCZSXAADGGG002">
+</form>
+
+<form action="#" method="post">
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+</form>
+
+<form action="#" method="post">
+    @csrf
+    // Create <input type="hidden" name="_token" value="WQEQWasd1212dasdCZSXAADGGG002">
+</form>
+
 ```
