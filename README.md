@@ -112,7 +112,7 @@ Route::get('/user/{id}/{name}', function($id, $name) {
 ![Route pattern protection](images/pattern_protection.png)
   
   
-### Route model binding  
+### Route model binding (Implicit)
   
 ```
 
@@ -125,6 +125,6 @@ Route::get('/user/{user}', function(App\User $user) {
 ```  
   
   
-### Route model binding maped in RouteServiceProvider.php  
+### Route model binding maped in RouteServiceProvider.php (Explicit)
   
 ![Route model binding](images/model_binding.png)
