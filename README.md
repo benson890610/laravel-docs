@@ -99,4 +99,9 @@ Route::get('/user/{name}', function($name) {
   echo $name;
 })->where('name', '[a-zA-Z]+');
 
+Route::get('/user/{id}/{name}', function($id, $name) {
+  echo $id;
+  echo $name;
+})->where('id' => '[0-9]+', 'name' => '[a-zA-Z]+');
+
 ```
