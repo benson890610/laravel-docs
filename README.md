@@ -13,4 +13,22 @@ Laravel documentation for learning
 php artisan make:model Post     // Model created
 php artisan make:model Post -m  // Model with migration created
 
+```  
+  
+  
+### Get all  
+  
+```
+
+$posts = Post::all();
+
+```  
+  
+  
+### Get single  
+  
+```
+
+$post = Post::find($id)
+
 ```
