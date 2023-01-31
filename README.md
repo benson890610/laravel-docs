@@ -31,5 +31,7 @@ $posts = Post::orderBy('id', 'desc')->get();
 ```
 
 $post = Post::find($id);
+$post = Post::where('id', $id)->first() // To retreive as Post Model
+$post = Post::where('id', $id)->get()   // To retreive as Collection
 
 ```
