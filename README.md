@@ -109,7 +109,7 @@ Route::get('/user/{id}/{name}', function($id, $name) {
   
 ### Route with regular expression maped in RouteServiceProvider.php  
   
-![Route pattern protection](images/pattern_protection.pnh)
+![Route pattern protection](images/pattern_protection.png)
   
   
 ### Route model binding  
