@@ -84,6 +84,7 @@ Laravel documentation for learning
 // Request method as PUT
 <form action="#" method="post">
     {{ method_field('PUT') }}
+    <input type="hidden" name="_method" value="PUT">
 </form>
 
 ```
