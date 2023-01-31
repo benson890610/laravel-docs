@@ -27,4 +27,14 @@ composer create-project laravel/laravel myproject --prefer-dist v5.5.*
 laravel new app_name // Create new application  
 laravel -v           // Check laravel installer version
 
+```  
+  
+  
+### RouteServiceProvider  
+  
+```
+
+// v5.5 if this property is presented then we dont need to specify in routes/ full controller namespace path 
+protected $namespace = 'App\Http\Controllers';
+
 ```
