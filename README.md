@@ -75,4 +75,28 @@ Route::group(['as' => 'home.'], function() {
     Route::get('/contact', 'HomeController@contact')->name('contact); // home.contact
 });
 
+```  
+  
+  
+### Route with only view  
+  
+```
+
+Route::view('/view', 'pages.home');
+
+```  
+  
+  
+### Route with regular expression parameter pattern matching  
+  
+```
+
+Route::get('/user/{id}', function($id) {
+  echo $id;
+})->where('id', '[0-9]+');
+
+Route::get('/user/{name}', function($name) {
+  echo $name;
+})->where('name', '[a-zA-Z]+');
+
 ```
