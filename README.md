@@ -11,9 +11,28 @@ Laravel documentation for learning
 ```
 
 public function service(Request $request) {
+
+    // Check if request parameter presented
     if($request->has('state')) {
         echo $request->get('state');
     }
+}
+
+```  
+  
+  
+### Check if request coming from route  
+  
+```
+
+public function handle(Request $request) {
+
+    if ( $request->route()->named('users.login') ) {
+        // Continue with request
+    } else {
+        // Show error message
+    }
+
 }
 
 ```
