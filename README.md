@@ -37,4 +37,13 @@ laravel -v           // Check laravel installer version
 // v5.5 if this property is presented then we dont need to specify in routes/ full controller namespace path 
 protected $namespace = 'App\Http\Controllers';
 
+public function boot() {
+  
+  // Only execute if {id} is numeric
+  Route::pattern('id', '[0-9]+');
+  
+  parent::boot();
+
+}
+
 ```
