@@ -42,6 +42,9 @@ public function boot() {
   // Only execute if {id} is numeric
   Route::pattern('id', '[0-9]+');
   
+  // Bind eloquent model class to route parameter
+  Route::model('user', App\User::class);
+  
   parent::boot();
 
 }
