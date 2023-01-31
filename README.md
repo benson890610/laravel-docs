@@ -30,7 +30,7 @@ laravel -v           // Check laravel installer version
 ```  
   
   
-### RouteServiceProvider  
+### RouteServiceProvider.php  
   
 ```
 
