@@ -21,6 +21,7 @@ php artisan make:model Post -m  // Model with migration created
 ```
 
 $posts = Post::all();
+$posts = Post::orderBy('id', 'desc')->get();
 
 ```  
   
