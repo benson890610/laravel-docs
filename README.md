@@ -117,4 +117,9 @@ Route::get('/user/{user}', function(App\User $user) {
     echo $user->is_active;
 });
 
-```
+```  
+  
+  
+### Route model binding maped in RouteServiceProvider.php  
+  
+![Route model binding](images/model_binding.png)
