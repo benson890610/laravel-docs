@@ -29,6 +29,6 @@ $posts = Post::all();
   
 ```
 
-$post = Post::find($id)
+$post = Post::find($id);
 
 ```
