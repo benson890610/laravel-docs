@@ -35,4 +35,22 @@ $post = Post::find($id);
 $post = Post::where('id', $id)->first() // To retreive as Post Model
 $post = Post::where('id', $id)->get()   // To retreive as Collection
 
+```  
+  
+  
+### Get all by pagination  
+  
+```
+
+$posts = Post::orderBy('id', 'desc')->paginate(2);
+
+// In blade.php  
+
+@foreach($posts as $post) 
+    // Show each post
+@endforeach
+
+// Show pagination links
+{{ $posts->links() }}
+
 ```
