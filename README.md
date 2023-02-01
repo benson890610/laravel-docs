@@ -1,52 +1,41 @@
 # laravel-docs
 Laravel documentation for learning  
+  
+  
+## Middleware  
+  
+  
 
-### Install laravel globaly  
+### Create middleware  
   
 ```
 
-composer global require "laravel/installer"
+php artisan make:middleware CheckAge
 
-```
-  
-  
-### Create latest version or with specific version project   
-  
-```
-composer create-project laravel/laravel app_name
-composer create-project laravel/laravel "5.5.*" app_name --prefer-dist
-composer create-project laravel/laravel myproject --prefer-dist v5.5.*
+// app/Http/Middleware/CheckAge.php 
+public function handle($request, Closure $next) {
 
-```
-  
-  
-### Laravel commands  
-  
-```
-
-laravel new app_name // Create new application  
-laravel -v           // Check laravel installer version
-
-```  
-  
-  
-### RouteServiceProvider.php  
-  
-```
-
-// v5.5 if this property is presented then we dont need to specify in routes/ full controller namespace path 
-protected $namespace = 'App\Http\Controllers';
-
-public function boot() {
-  
-  // Only execute if {id} is numeric
-  Route::pattern('id', '[0-9]+');
-  
-  // Bind eloquent model class to route parameter
-  Route::model('user', App\User::class);
-  
-  parent::boot();
+    $age = $request->age;
+    
+    if ( $age < 18 ) {
+        return redirect()->route('home');
+    }
 
 }
+
+// app/Http/Kernel.php
+protected $routeMiddleware = [
+    'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
+    'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+    'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+    'can' => \Illuminate\Auth\Middleware\Authorize::class,
+    'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+    'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+    'checkAge' => \App\Http\Middleware\CheckAge::class
+];
+
+// routes/web.php 
+
+Route::get('adult', function() { 'Adult page'; })->middleware('checkAge');
 
 ```
