@@ -16,12 +16,13 @@ php artisan make:model Post -m  // Model with migration created
 ```  
   
   
-### Get all  
+### Get all with order by and limit  
   
 ```
 
 $posts = Post::all();
 $posts = Post::orderBy('id', 'desc')->get();
+$posts = Post::orderBy('id', 'desc')->take(3)->get();
 
 ```  
   
