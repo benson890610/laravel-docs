@@ -33,6 +33,15 @@ php artisan make:controller PostController --resource // create resource routes
 php artisan make:model Phone
 php artisan make:model Phone -m // create migration
 
+```  
+  
+  
+### Create middleware  
+  
+```
+
+php artisan make:middleware ageRestriction
+
 ```
   
   
