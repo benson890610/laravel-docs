@@ -31,4 +31,13 @@ php artisan make:controller HomeController
 
 php artisan route:list
 
+```  
+  
+  
+### Generate new api key  
+  
+```
+
+php artisan key:generate
+
 ```
