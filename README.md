@@ -21,8 +21,19 @@ php artisan serve // http://127.0.0.1:8000
 ```
 
 php artisan make:controller HomeController
+php artisan make:controller PostController --resource // create resource routes
 
 ```  
+  
+  
+### Create model  
+  
+```
+
+php artisan make:model Phone
+php artisan make:model Phone -m // create migration
+
+```
   
   
 ### Show all available routes  
