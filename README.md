@@ -49,4 +49,33 @@ public function boot() {
 
 }
 
+```  
+  
+  
+### Create laravel app in virtual host enviroment  
+
+```
+
+# In apache/conf/extra/httpd-vhosts.conf 
+
+<VirtualHost *:80>
+DocumentRoot "C:\xampp\htdocs\laravel\lsapp\public"
+DirectoryIndex index.php
+ServerName lsapp.test
+	<Directory "C:\xampp\htdocs\laravel\lsapp\public">
+	Options Indexes FollowSymLinks MultiViews
+	AllowOverride all
+	Order Deny,Allow
+	Allow from all
+	Require all granted
+	</Directory>
+</VirtualHost>
+
+
+# In C:\Windows\System32\drivers\etc\hosts
+
+127.0.0.1 lsapp.test
+
+
+
 ```
