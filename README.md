@@ -18,6 +18,19 @@ Route::get('/', [HomeController::class, 'index']);     // Newer version controll
 Route::get('/about', [HomeController::class, 'about'])->name('home.about') // Naming routes 
 
 ```  
+
+
+### Route parameters 
+
+```
+
+Route::get('/user/{id}', function($id){
+    echo 'User with id ' . $id // User with id 231
+});
+
+Route::get('/user/{id}', 'UsersController@index'); // User with id 231
+
+```
   
   
 ### Grouping routes by middleware  
