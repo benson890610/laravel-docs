@@ -87,4 +87,22 @@ Laravel documentation for learning
     <input type="hidden" name="_method" value="PUT">
 </form>
 
+```  
+  
+  
+### Ajax CSRF token  
+  
+```
+
+In <head> add: 
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
+in <script>
+
+$.ajax({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf_token"]').attr('content')
+    }
+});
+
 ```
