@@ -60,4 +60,13 @@ php artisan route:list
 
 php artisan key:generate
 
+```  
+  
+  
+### Check project version  
+
+```
+
+php artisan --version
+
 ```
