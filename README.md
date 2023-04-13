@@ -88,4 +88,14 @@ $post->save()  // New post in database created
 exit // This will exit from tinker terminal shell session
 
 
+```  
+
+
+### Maintance mode on/off  
+
+```
+
+php artisan down --message="Upgrading Database" // Set to maintance mode 
+php artisan up                                  // Set to live mode
+
 ```
