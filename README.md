@@ -19,6 +19,9 @@ composer global require "laravel/installer"
     \Illuminate\Support\Facades\Session;    // Session facade
     \Illuminate\Support\Facades\File;       // File facade
     
+    \Illuminate\Http\Request                // Incoming request
+    \Illuminate\Http\JsonResponse           // Return response in JSON format
+    
     \App\Http\Controllers\MyController;     // Controller namespace path
     
     \App\Post or \App\Models\Post           // Model namespace path
