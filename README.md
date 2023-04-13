@@ -28,6 +28,7 @@ return response()->json([
 
 ```  
 
+
 ### asset() helper  
   
 ```
@@ -35,5 +36,17 @@ return response()->json([
 // asset() helper automaticaly looks in public folder for other folders or files
 
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+```  
+  
+
+### config() helper  
+
+```
+
+# Works with config directory accessing files and files written options 
+
+config('app.name');
+config('database.connections);
 
 ```
