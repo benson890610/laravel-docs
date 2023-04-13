@@ -7,6 +7,22 @@ Laravel documentation for learning
 
 composer global require "laravel/installer"
 
+```  
+  
+  
+### Namespace classes  
+  
+```
+    \Illuminate\Support\Facades\DB;         // DB facade
+    \Illuminate\Support\Facades\Auth;       // Auth facade
+    \Illuminate\Support\Facades\Hash;       // Hash facade
+    \Illuminate\Support\Facades\Session;    // Session facade
+    \Illuminate\Support\Facades\File;       // File facade
+    
+    \App\Http\Controllers\MyController;     // Controller namespace path
+    
+    \App\Post or \App\Models\Post           // Model namespace path
+
 ```
   
   
