@@ -69,4 +69,23 @@ php artisan key:generate
 
 php artisan --version
 
+```  
+
+
+### Artisan Tinker  
+
+```
+
+php artisan tinker 
+
+App\Post::count() // 2
+
+$post = new App\Post;
+$post->title = 'Post Four'
+$post->body  = 'Text body message prepared'
+$post->save()  // New post in database created
+
+exit // This will exit from tinker terminal shell session
+
+
 ```
