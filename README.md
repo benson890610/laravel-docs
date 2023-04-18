@@ -62,4 +62,13 @@ $posts = Post::orderBy('id', 'desc')->paginate(2);
 // Show pagination links
 {{ $posts->links() }}
 
+```  
+  
+  
+### Limit enough items  
+
+```
+
+$posts = Post::orderBy('id', 'desc')->limit(5)->get() // Total 5 items
+
 ```
