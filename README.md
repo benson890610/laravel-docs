@@ -49,4 +49,15 @@ return response()->json([
 config('app.name');
 config('database.connections);
 
+```  
+  
+  
+### route() helper with parameter  
+
+```
+
+// blade template 
+
+<a href="{{ route('posts.show', ['post' => $post->id]) }}">{{ $post->title }}</a>
+
 ```
