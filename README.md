@@ -36,6 +36,15 @@ $post = Post::where('id', $id)->first() // To retreive as Post Model
 $post = Post::where('id', $id)->get()   // To retreive as Collection
 
 ```  
+
+
+### Get single or fail
+  
+```
+
+$post = Post::findOrFail($id);  // This will fetch post or redirect to fail destination
+
+```  
   
   
 ### Get all by pagination  
