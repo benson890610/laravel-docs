@@ -51,6 +51,8 @@ $post = Post::findOrFail($id);  // This will fetch post or redirect to fail dest
   
 ```
 
+// In controller
+
 $posts = Post::orderBy('id', 'desc')->paginate(2);
 
 // In blade.php  
