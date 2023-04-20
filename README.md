@@ -37,6 +37,7 @@ public function handle(Request $request) {
 
 ```  
 
+
 ### Get http request path  
 
 ```
@@ -47,4 +48,12 @@ public function handle(Request $request) {
     $request->path(); // foo/bar
 }
 
-```
+```  
+
+
+### Get request referer header  
+
+public function handle(Request $request) {
+    $request->server('HTTP_REFERER');
+    $request->headers->get('referer');
+}
