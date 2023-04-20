@@ -27,7 +27,7 @@ public function service(Request $request) {
 
 public function handle(Request $request) {
 
-    if ( $request->route()->named('users.login') ) {
+    if ( $request->routeIs('users.*') ) {
         // Continue with request
     } else {
         // Show error message
