@@ -35,4 +35,16 @@ public function handle(Request $request) {
 
 }
 
+```  
+
+### Get http request path  
+
+```
+
+public function handle(Request $request) {
+    // If request url was: http://localhost:8000/foo/bar
+    
+    $request->path(); // foo/bar
+}
+
 ```
