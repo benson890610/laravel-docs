@@ -74,4 +74,13 @@ $posts = Post::orderBy('id', 'desc')->paginate(2);
 $posts = Post::orderBy('id', 'desc')->limit(5)->get() // Total 5 items or
 $posts = Post::orderBy('id', 'desc')->take(5)->get()  // Total 5 items
 
+```  
+
+
+### Total count of items  
+
+```
+
+$total = Post::count();
+
 ```
