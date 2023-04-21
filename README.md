@@ -53,7 +53,11 @@ public function handle(Request $request) {
 
 ### Get request referer header  
 
+```
+
 public function handle(Request $request) {
     $request->server('HTTP_REFERER');
     $request->headers->get('referer');
 }
+
+```
