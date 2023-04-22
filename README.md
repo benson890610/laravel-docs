@@ -4,6 +4,17 @@ Laravel documentation for learning
   
 ## Request service library  
 
+Library: Illuminate\Http\Request
+
+
+### Get value from request  
+
+```
+
+$title = $request->input('title');
+$title = $request->title;
+
+```
 
 
 ### Check and Get specific query string  
