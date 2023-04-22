@@ -40,6 +40,7 @@ if ( session()->has('success') ) {
 
 $value = Session::get('success');
 $value = session()->get('success);
+$value = session('success');
 
 ```
  
