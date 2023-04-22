@@ -52,12 +52,21 @@ config('database.connections);
 ```  
   
   
-### route() helper with parameter  
+### route() helper with parameter - this helper is connected with named routes 
 
 ```
 
 // blade template 
 
 <a href="{{ route('posts.show', ['post' => $post->id]) }}">{{ $post->title }}</a>
+
+```  
+
+
+### base_path() helper  - this helper will return root path of project
+
+```  
+
+echo base_path() // C:\xampp\htdocs\laravel\lsap
 
 ```
