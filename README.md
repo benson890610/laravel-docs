@@ -69,4 +69,14 @@ config('database.connections);
 
 echo base_path() // C:\xampp\htdocs\laravel\lsap
 
+```  
+
+
+### asset() - this helper will look for files in public directory 
+
+``` 
+
+echo asset('css/app.css') // http://lsapp.test/css/app.css
+echo asset('js/app.js')   // http://lsapp.test/js/app.js
+
 ```
