@@ -98,4 +98,13 @@ exit // This will exit from tinker terminal shell session
 php artisan down --message="Upgrading Database" // Set to maintance mode 
 php artisan up                                  // Set to live mode
 
+```  
+  
+
+### Route caching  
+
+```
+
+php artisan route:cache
+
 ```
