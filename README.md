@@ -108,6 +108,8 @@ $post->save();
 
 ```
 
+use App\Post;
+
 // Single update
 $post = Post::find($id)
 $post->title = 'Updated new title';
@@ -120,6 +122,27 @@ Post::where('status', 1)
       'name'  => 'User active',
       'gender => 'Male'
     ]);
+
+```  
+
+
+### Delete database record  
+
+```
+
+use App\Post;
+
+// Single delete
+$post = Post::find($id);
+$post->delete();
+
+// OR 
+
+Post::destroy([1,2,3]);
+
+// Mass delete
+Post::where('status', 0)
+    ->delete();
 
 ```
 
