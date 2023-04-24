@@ -29,13 +29,15 @@ return response()->json([
 ```  
 
 
-### asset() helper  
+### method_field() helper  
   
 ```
 
-// asset() helper automaticaly looks in public folder for other folders or files
+// Used in forms as PUT or DELETE or PATCH
 
-<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+{{ method_field('PUT') }}
+or 
+{{ method_field('DELETE') }}
 
 ```  
   
