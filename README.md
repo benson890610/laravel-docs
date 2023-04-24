@@ -83,4 +83,43 @@ $posts = Post::orderBy('id', 'desc')->take(5)->get()  // Total 5 items
 
 $total = Post::count();
 
+```  
+
+
+### Create new database record  
+
+```  
+
+use App\Post;
+
+or 
+
+use App\Models\Post;
+
+$post = new Post;
+$post->title = 'Some title';
+$post->body  = 'Regular post body';
+$post->save();
+
+```  
+
+
+### Update database record  
+
 ```
+
+// Single update
+$post = Post::find($id)
+$post->title = 'Updated new title';
+$post->body  = 'Updated new post body';
+$post->save();
+
+// Mass updates
+Post::where('status', 1)
+    ->update([
+      'name'  => 'User active',
+      'gender => 'Male'
+    ]);
+
+```
+
