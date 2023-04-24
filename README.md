@@ -40,6 +40,21 @@ or
 {{ method_field('DELETE') }}
 
 ```  
+
+
+### csrf_field() and csrf_token() helper  
+
+```
+
+// Used in forms for cross site protection together with POST, PUT, PATCH and DELETE requests
+
+csrf_field()
+
+or 
+
+<input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+```
   
 
 ### config() helper  
