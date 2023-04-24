@@ -54,6 +54,15 @@ Laravel documentation for learning
   @include('inc.navbar')
 
 ```  
+
+
+### Blade parse html elements from code  
+
+```
+
+<div class="bg-white w-full py-4 px-6">{!! $body !!}</div>
+
+```
   
   
 ### CSRF Token  
