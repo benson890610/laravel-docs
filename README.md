@@ -162,3 +162,12 @@ Post::where('status', 0)
 
 ```
 
+
+### Get first and last item  
+
+``` 
+
+$first = Post::first();
+$last  = Post::orderBy('id', 'desc')->first();
+
+```
