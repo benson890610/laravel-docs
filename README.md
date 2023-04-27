@@ -11,7 +11,8 @@ Laravel documentation for learning
   
 ```
 
-php artisan serve // http://127.0.0.1:8000
+php artisan serve              // http://127.0.0.1:8000
+php artisan server --port=8080 // http://127.0.0.1:8080
 
 ```  
   
