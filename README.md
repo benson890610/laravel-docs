@@ -96,4 +96,13 @@ echo base_path() // C:\xampp\htdocs\laravel\lsap
 echo asset('css/app.css') // http://lsapp.test/css/app.css
 echo asset('js/app.js')   // http://lsapp.test/js/app.js
 
+```  
+
+
+### old() - this helper will remember old input value and on error will display old value
+
+```
+
+<input type="text" name="title" id="title" value="{{ old('title') }}">
+
 ```
