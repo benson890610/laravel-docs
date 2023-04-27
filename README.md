@@ -3,7 +3,23 @@ Laravel documentation for learning
   
   
   
-## Models  
+## Models 
+
+
+
+### Model properties 
+
+```
+
+protected $table      = 'table_name' | posts
+protected $primaryKey = 'primary_key_name' | id
+protected $connection = 'connection_name' | mysql
+protected $keyType    = 'string' | 'integer'
+
+public $incrementing = true | false
+public $timestamps   = true | false
+
+```
   
   
 ### Create model and with migration  
