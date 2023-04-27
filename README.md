@@ -19,6 +19,8 @@ composer global require "laravel/installer"
     \Illuminate\Support\Facades\Session;    // Session facade
     \Illuminate\Support\Facades\File;       // File facade
     
+    \Illuminate\Database\Eloquent\Model     // Parent model class extended by other child models
+    
     \Illuminate\Http\Request                // Incoming request
     \Illuminate\Http\JsonResponse           // Return response in JSON format
     
