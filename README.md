@@ -23,10 +23,16 @@ $title = $request->title;
 
 public function service(Request $request) {
 
-    // Check if request parameter presented
-    if($request->has('state')) {
+    // Check if request parameter present
+    if ( $request->has('state') ) {
         echo $request->get('state');
     }
+    
+    // Check if multiple request parameters are present
+    if ( $request->has(['name', 'email']) ) {
+        // Continue with request parameter
+    }
+    
 }
 
 ```  
