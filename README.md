@@ -127,4 +127,24 @@ $.ajax({
     @endforeach
 @endif 
 
+```  
+
+
+### Blade check auth  
+
+```
+
+@if ( auth()->user() ) 
+    // Show authenticate user content
+@else 
+    // Show guest user content
+@endif
+
+
+@if ( auth()->guest() ) 
+    // Show guest user content
+@else 
+    // Show authenticate user content
+@endif
+
 ```
