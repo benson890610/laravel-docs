@@ -41,6 +41,10 @@ Route::group(['middlware' => 'auth'], function() {
     Route::resource('orders', 'OrdersController');
 }); 
 
+OR
+
+Route::resource('orders', 'OrdersController')->middleware('auth');
+
 ```  
   
   
