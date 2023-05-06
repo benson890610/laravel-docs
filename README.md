@@ -12,6 +12,7 @@ List of all rules:
 4. email        - request data email must be of correct type
 5. min:6        - request data must contain minimum 6 characters
 6. unique:users - request parameter must be unique in Users table e.g (email parameter)
+7. confirmed    - request parameter used in password validation, must contain password_confirmed field
 
 ```
 
@@ -19,8 +20,9 @@ List of all rules:
 
 public function store(Request $request) {
     $request->validate([
-	'title' => ['required', 'max:255'],
-	'email  => ['unique:users']
+	'title'    => ['required', 'max:255'],
+	'email     => ['unique:users'],
+	'password' => ['confirmed']
      ]);
 }
 
