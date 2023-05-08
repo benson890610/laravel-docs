@@ -39,6 +39,7 @@ php artisan migrate:rollback
   // Version 5.5.*
   
   $table->increments('id')                 // AUTO_INCREMENT INT 'id' column
+  $table->integer('user_id')               // INT 'user_id' column
   $table->string('title')                  // VARCHAR(255) 'title' column
   $table->string('title')->nullable(false) // VARCHAR(255) NOT NULL 'title' column
   $table->mediumText('body')               // MEDIUMTEXT 'body' column
