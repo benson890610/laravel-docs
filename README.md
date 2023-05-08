@@ -4,6 +4,16 @@ Laravel documentation for learning
 ## Laravel migrations
 
 
+
+### Create migration  
+
+```
+
+  php artisan make:migration create_post_table
+
+```
+
+
 ### Migrate to database
   
 ```
