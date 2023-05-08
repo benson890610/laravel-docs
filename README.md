@@ -35,6 +35,15 @@ php artisan make:model Phone
 php artisan make:model Phone -m // create migration
 
 ```  
+
+
+### Create migration  
+
+```
+
+php artisan make:migration create_post_table
+
+```
   
   
 ### Create middleware  
