@@ -37,3 +37,16 @@ php artisan migrate:rollback
   $table->rememberToken()                  // Create remember_token column VARCHAR(255) DEFAULT NULL
  
 ```
+
+
+### Drop column on migrate rollback  
+
+```
+
+    public function down() {
+        Schema::table('posts', function(Blueprint $table) {
+            $table->dropColumn('user_id');
+        });
+    }
+
+```
