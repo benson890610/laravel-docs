@@ -38,4 +38,28 @@ protected $routeMiddleware = [
 
 Route::get('adult', function() { 'Adult page'; })->middleware('checkAge');
 
+```  
+
+
+### Middleware inside constructor  
+
+```
+
+class PostsController extends Controller {
+    public function __construct() {
+        // Require authenticate user access
+        
+        $this->middleware('auth')
+    }
+    
+    public function index() {
+        // Index page
+    }
+    
+    public function create() {
+        // Create page
+    }
+}
+
+
 ```
