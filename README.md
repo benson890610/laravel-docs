@@ -61,5 +61,35 @@ class PostsController extends Controller {
     }
 }
 
+```
+
+
+### Middleware inside constructor with except option  
+
+```
+
+use Illuminate\Http\Request;
+
+class PostsController extends Controller {
+    public function __construct() {
+        // Require authenticate user access
+        // but not for index method
+        
+        $this->middleware('auth', ['except' => ['index'] ])
+    }
+    
+    public function index() {
+        // Index page
+    }
+    
+    public function create() {
+        // Create page
+    }
+    
+    public function edit(Request $request, $id) {
+        // Edit page
+    }
+    
+}
 
 ```
