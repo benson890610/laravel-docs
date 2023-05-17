@@ -118,3 +118,12 @@ php artisan up                                  // Set to live mode
 php artisan route:cache
 
 ```
+
+
+### Create laravel symlink
+
+```
+
+php artisan storage:link
+
+```
