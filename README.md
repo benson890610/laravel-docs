@@ -52,7 +52,8 @@ public function handle(Request $request) {
 
 }
 
-```  
+```
+
 
 
 ### Get http request path  
@@ -68,6 +69,7 @@ public function handle(Request $request) {
 ```  
 
 
+
 ### Get request referer header  
 
 ```
@@ -79,6 +81,8 @@ public function handle(Request $request) {
 
 ```  
 
+
+
 ### Get request file  
 
 ```
@@ -88,5 +92,16 @@ $name     = $fileObj->getClientOriginalName();
 $type     = $fileObj->getClientMimeType();
 $ext      = $fileObj->getClientExtension();
 $size     = $fileObj->getClientSize();
+
+```  
+
+
+
+### Upload file  
+
+```
+
+$file = $request->file('file');
+$file->storeAs('storage/cover_images', $file->getClientOriginalName());
 
 ```
