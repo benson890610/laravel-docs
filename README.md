@@ -83,6 +83,10 @@ public function handle(Request $request) {
 
 ```
 
-$fileObj = $request->file('filename');
+$fileObj  = $request->file('filename');
+$name     = $fileObj->getClientOriginalName();
+$type     = $fileObj->getClientMimeType();
+$ext      = $fileObj->getClientExtension();
+$size     = $fileObj->getClientSize();
 
 ```
