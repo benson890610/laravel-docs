@@ -77,4 +77,12 @@ public function handle(Request $request) {
     $request->headers->get('referer');
 }
 
+```  
+
+### Get request file  
+
+```
+
+$fileObj = $request->file('filename');
+
 ```
