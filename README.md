@@ -13,13 +13,15 @@ composer global require "laravel/installer"
 ### Namespace classes  
   
 ```
-    \Illuminate\Support\Facades\DB;         // DB facade
-    \Illuminate\Support\Facades\Auth;       // Auth facade
-    \Illuminate\Support\Facades\Hash;       // Hash facade
-    \Illuminate\Support\Facades\Session;    // Session facade
-    \Illuminate\Support\Facades\File;       // File facade
+    \Illuminate\Support\Facades\DB         // DB facade
+    \Illuminate\Support\Facades\Auth       // Auth facade
+    \Illuminate\Support\Facades\Hash       // Hash facade
+    \Illuminate\Support\Facades\Session    // Session facade
+    \Illuminate\Support\Facades\File       // File facade
+    \Illuminate\Support\Facades\Schema     // Schema facade used as helper with creating migration tables
     
-    \Illuminate\Database\Eloquent\Model     // Parent model class extended by other child models
+    \Illuminate\Database\Eloquent\Model    // Parent model class extended by other child models
+    \Illuminate\Database\Schema\Blueprint  // Blueprint class used in conjuction with Schema Facade for creating table columns
     
     \Illuminate\Http\Request                // Incoming request
     \Illuminate\Http\JsonResponse           // Return response in JSON format
