@@ -1,114 +1,75 @@
 # laravel-docs
-Laravel documentation for learning  
+Laravel documentation for learning 
 
-### Install laravel globaly  
-  
+## File handling
+
+
+
+### File facade  
+
 ```
 
-composer global require "laravel/installer"
+Illuminate\Support\Facades\File
 
 ```  
   
   
-### Namespace classes  
-  
+### Check if file exists 
+
 ```
-    \Illuminate\Support\Facades\DB         // DB facade
-    \Illuminate\Support\Facades\Auth       // Auth facade
-    \Illuminate\Support\Facades\Hash       // Hash facade
-    \Illuminate\Support\Facades\Session    // Session facade
-    \Illuminate\Support\Facades\File       // File facade
-    \Illuminate\Support\Facades\Schema     // Schema facade used as helper with creating migration tables
+
+public function handle() {
+    if ( File::exists($fullPathName) ) {
+    	dd('File found');
+    } else {
+    	dd('File NOT found');
+    }
+}
+
+```
+
+
+### Delete file or files  
+
+```
+
+public function handle() {
+    // Delete one file 
+    File::delete($fullPathFile);
     
-    \Illuminate\Database\Eloquent\Model    // Parent model class extended by other child models
-    \Illuminate\Database\Schema\Blueprint  // Blueprint class used in conjuction with Schema Facade for creating table columns
-    
-    \Illuminate\Http\Request                // Incoming request
-    \Illuminate\Http\JsonResponse           // Return response in JSON format
-    
-    \App\Http\Controllers\MyController;     // Controller namespace path
-    
-    \App\Post or \App\Models\Post           // Model namespace path
+    // Delete multiple files
+    File::delete([$file1, $file2, $file3, $file4]);
+    File::delete($file1, $file2, $file3);
+}
 
 ```
-  
-  
-### Create latest version or with specific version project   
-  
-```
-composer create-project laravel/laravel app_name
-composer create-project laravel/laravel "5.5.*" app_name --prefer-dist
-composer create-project laravel/laravel myproject --prefer-dist v5.5.*
+
+
+### Validate file  
 
 ```
-  
-  
-### Laravel commands  
-  
-```
 
-laravel new app_name // Create new application  
-laravel -v           // Check laravel installer version
-
-```  
-  
-  
-### RouteServiceProvider.php  
-  
-```
-
-// v5.5 if this property is presented then we dont need to specify in routes/ full controller namespace path 
-protected $namespace = 'App\Http\Controllers';
-
-public function boot() {
-  
-  // Only execute if {id} is numeric
-  Route::pattern('id', '[0-9]+');
-  
-  // Bind eloquent model class to route parameter
-  Route::model('user', App\User::class);
-  
-  parent::boot();
-
+public function handle(Request $request) {
+    $request->validate([
+    	'file' => ['image', 'mimes:jpg,png,jpeg', 'max:2048']
+    ]);
 }
 
 ```  
-  
-  
-### Create laravel app in virtual host enviroment  
+
+
+### Upload file  
 
 ```
 
-# In apache/conf/extra/httpd-vhosts.conf 
-
-<VirtualHost *:80>
-DocumentRoot "C:\xampp\htdocs\laravel\lsapp\public"
-DirectoryIndex index.php
-ServerName lsapp.test
-	<Directory "C:\xampp\htdocs\laravel\lsapp\public">
-	Options Indexes FollowSymLinks MultiViews
-	AllowOverride all
-	Order Deny,Allow
-	Allow from all
-	Require all granted
-	</Directory>
-</VirtualHost>
-
-
-# In C:\Windows\System32\drivers\etc\hosts
-
-127.0.0.1 lsapp.test
-
-```  
-
-
-### CKEditor JS  
-
-```
-
-<script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
-<script>
-    CKEDITOR.replace( 'body' );
-</script>
+public function handle(Request $request) {
+    $file = $request->file('file')    // UploadFile instance
+    
+    $filename = pathinfo($file->getClientOriginalName, PATHINFO_FILENAME);
+    $ext      = $file->getClientOriginalExtension();
+    $formated = $filename . '_' . time() . '.' . $ext;     // Create unique file
+    
+    $file->storeAs('public/location/', $formated);
+}
 
 ```
