@@ -71,6 +71,10 @@ class User extends Model {
     
     public function posts() {
         return $this->hasOne('App\Phone'); // Laravel version 5.5.*
+        
+        // OR 
+        
+        return $this->hasOne('App\Phone', 'user_id'); // Pass the second argument as foreign key in App\Phone
     }
 }
 
