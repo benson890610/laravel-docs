@@ -58,7 +58,10 @@ class Phone extends Model {
     public $incrementing  = true;
     
     public function user() {
-        return $this->belongsTo('App\User'); // Laravel version 5.5.*
+        // Inverse relationship
+        // Second optional argument foreign_id
+        // Third optiomal argument primary key from main table
+        return $this->belongsTo('App\User', 'user_id', 'id');
     }
     
 }
@@ -70,11 +73,10 @@ class User extends Model {
     public $incrementing  = true;
     
     public function posts() {
-        return $this->hasOne('App\Phone'); // Laravel version 5.5.*
-        
-        // OR 
-        
-        return $this->hasOne('App\Phone', 'user_id'); // Pass the second argument as foreign key in App\Phone
+        // One to one relationship
+        // Second optional argument foreign key
+        // Third optional argument primary key from main table
+        return $this->hasOne('App\Phone', 'user_id', 'id');
     }
 }
 
