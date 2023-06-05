@@ -16,6 +16,7 @@ composer global require "laravel/installer"
     \Illuminate\Support\Facades\DB         // DB facade
     \Illuminate\Support\Facades\Auth       // Auth facade
     \Illuminate\Support\Facades\Hash       // Hash facade
+    \Illuminate\Support\Facades\View       // View facade
     \Illuminate\Support\Facades\Session    // Session facade
     \Illuminate\Support\Facades\File       // File facade
     \Illuminate\Support\Facades\Schema     // Schema facade used as helper with creating migration tables
