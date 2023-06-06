@@ -17,6 +17,33 @@ $title = $request->title;
 ```
 
 
+### Check route path 
+
+```
+
+// layouts.blade.php 
+
+@if ( request()->is('about')
+    <div>Welcome to about page</div>
+@endif
+
+```
+
+
+### Get url and full url from request  
+
+```
+
+// url() get full url without query string 
+// fullUrl() get full url with query string
+
+request()->url()      // http://my-site.com/page
+request()->fullUrl()  // http://my-site.com/page?filter=true
+
+```
+
+
+
 ### Check and Get specific query string  
   
 ```
