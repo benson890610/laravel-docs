@@ -7,7 +7,7 @@ Laravel documentation for learning
 Library: Illuminate\Http\Request
 
 
-### Get value from request  
+### Request collect params - $request->input($param)
 
 ```
 
@@ -17,7 +17,7 @@ $title = $request->title;
 ```
 
 
-### Check route path 
+### Request route check - $request->is($path)
 
 ```
 
@@ -27,10 +27,28 @@ $title = $request->title;
     <div>Welcome to about page</div>
 @endif
 
+@if ( request()->is('/')
+    <div>Welcome to home page</div>
+@endif
+
 ```
 
 
-### Get url and full url from request  
+### Request method - $request->method() and $request->isMethod($methodName)
+
+```
+
+$method = $request->method();      // eg. GET
+
+if ( $request->isMethod('GET') ) {
+    dd('It is GET request method');
+}
+
+```
+
+
+
+### Request url and fullUrl - $request->url() and $request->fullUrl()  
 
 ```
 
@@ -44,7 +62,7 @@ request()->fullUrl()  // http://my-site.com/page?filter=true
 
 
 
-### Check and Get specific query string  
+### Request check required parameters - $request->has($string) or $request->has($array)  
   
 ```
 
