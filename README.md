@@ -14,9 +14,10 @@ Library: Illuminate\Http\Request
 $title = $request->input('title');
 $title = $request->title;
 
-```
-
-
+```  
+  
+  
+  
 ### Request route check - $request->is($path)
 
 ```
