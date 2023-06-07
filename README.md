@@ -1,7 +1,7 @@
 # laravel-docs
 Laravel documentation for learning  
 
-## DB Library
+## DB Query Builder Library
 
 ### DB Commands  
 
@@ -14,3 +14,25 @@ DB::table('customers')                       // Set the targeted table
 ->get()                                      // Retreive results
 
 ```  
+  
+  
+  
+### DB named or positional bindings 
+
+```
+
+$id = 1002;
+
+DB::table('customer')
+->where('id', '=', ':id')
+->setBindings([ ':id' => $id ])
+->update([ 'status' => 1 ]);
+
+// OR 
+
+DB::table('customer')
+->where('id', '=', '?')
+->setBindings([ $id ])
+->update([ 'status' => 1 ]);
+
+```
