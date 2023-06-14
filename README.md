@@ -98,9 +98,10 @@ Laravel documentation for learning
 
 ```  
   
-  
+<br>
 ### Ajax CSRF token  
-  
+<br>
+
 ```
 
 In <head> add: 
@@ -116,8 +117,9 @@ $.ajax({
 
 ```  
 
-
+<br>
 ### Blade validation errors  
+<br>
 
 ```
 
@@ -129,10 +131,12 @@ $.ajax({
 
 ```  
 
-
-### Blade check auth  
+<br>
+### Blade auth and guest
+<br>
 
 ```
+// EXAMPLE 1.
 
 @if ( auth()->user() ) 
     // Show authenticate user content
@@ -146,5 +150,20 @@ $.ajax({
 @else 
     // Show authenticate user content
 @endif
+
+// EXAMPLE 2.
+
+@auth
+  // Show auth user content
+@else
+  // Show guest user content
+@endauth
+
+
+@guest 
+  // Show guest user content
+@else
+  // Show auth user content
+@endguest
 
 ```
