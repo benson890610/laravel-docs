@@ -42,6 +42,8 @@ php artisan migrate:rollback
   $table->integer('user_id')               // INT 'user_id' column
   $table->string('title')                  // VARCHAR(255) 'title' column
   $table->string('title')->nullable(false) // VARCHAR(255) NOT NULL 'title' column
+  $table->tinyInteger('is_active')
+        ->nullable(false)->default(0);
   $table->mediumText('body')               // MEDIUMTEXT 'body' column
   $table->mediumText('body')->nullable()   // MEDIUMTEXT DEFAULT NULL 'body' column
   $table->timestamps()                     // Create created_at and updated_at columns
