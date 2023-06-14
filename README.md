@@ -99,8 +99,8 @@ Laravel documentation for learning
 ```  
   
 <br>
+
 ### Ajax CSRF token  
-<br>
 
 ```
 
@@ -118,8 +118,8 @@ $.ajax({
 ```  
 
 <br>
+
 ### Blade validation errors  
-<br>
 
 ```
 
