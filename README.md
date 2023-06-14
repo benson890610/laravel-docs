@@ -138,7 +138,7 @@ $.ajax({
 
 <br>
 
-### Blade auth and guest
+### Blade @auth and @guest
 
 ```
 // EXAMPLE 1.
@@ -170,5 +170,105 @@ $.ajax({
 @else
   // Show auth user content
 @endguest
+
+```  
+
+<br>
+
+### Blade @switch control statement  
+
+```
+
+@switch ( $role ) 
+  
+  @case ( 'admin' )
+      <div>Load admin panel</div>
+      @break
+  @case ( 'manager' )
+  
+      <div>Load manager panel</div>
+      @break
+      
+  @default
+      <div>Load operator panel</div>
+  
+@endswitch
+
+```  
+
+<br>
+
+### Blade @isset and @empty conditions  
+
+```
+
+@isset ( $users )
+    // Loop through users collection 
+@endisset
+
+
+@empty ( $message )
+    // Message is empty = ''
+@endempty
+
+```  
+
+<br>
+
+### Blade loops  
+
+```
+
+
+// Example 1. regular foreach
+
+@foreach ( $users as $user )
+    {{ $user->name }} {{ $user->email }}
+@endforeach
+
+
+// Example 2. foreach with loop variable (first, last and index, parent, count) properties
+// $loop->count return total number of elements
+// $loop->parent used in nested loop will contain parent loop values 
+// $loop->first return the first iteration
+// $loop->last return the last iteration
+// $loop->index return current index
+
+@foreach ( $users as $user )
+  @if ( $loop->first) 
+    // First iteration
+  @endif
+  
+  {{ $loop->index }} {{ $user->name }} {{ $user->email }}
+  
+  @if ( $loop->last ) 
+    // Last iteration
+  @endif
+@endforeach  
+
+
+// Example 3. foreach with @continue and @break
+
+@foreach ( $users as $user )
+    @if ( $user->is_active === 0 ) @continue
+    
+    @if ( $user->is_blacklisted ) @break
+@endforeach
+
+
+// Example 4. forelse
+
+@forelse ( $users as $user ) 
+    <div>{{ $user->name }} {{ $user->email }}</div>
+@empty
+    <div>No users found</div>
+@endforelse  
+
+
+// Example 5. while 
+
+@while ( true )
+  <div>I am looping forever</div>
+@endwhile
 
 ```
