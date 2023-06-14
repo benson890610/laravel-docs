@@ -132,6 +132,7 @@ $.ajax({
 ```  
 
 <br>
+
 ### Blade auth and guest
 
 ```
