@@ -4,7 +4,7 @@ Laravel documentation for learning
   
 ## Blade Templete Engine  
   
-  
+<br>
   
 ### Simple layout and page extends layout
   
@@ -35,7 +35,8 @@ Laravel documentation for learning
 
 
 ```  
-  
+
+<br>
   
 ### Show dynamic variable from controller  
   
@@ -45,7 +46,8 @@ Laravel documentation for learning
 <p>This is {{ $paragraph }}</p>
 
 ```  
-  
+
+<br>
   
 ### Include other file  
   
@@ -55,6 +57,7 @@ Laravel documentation for learning
 
 ```  
 
+<br>
 
 ### Blade parse html elements from code  
 
@@ -63,7 +66,8 @@ Laravel documentation for learning
 <div class="bg-white w-full py-4 px-6">{!! $body !!}</div>
 
 ```
-  
+
+<br>
   
 ### CSRF Token  
   
@@ -84,7 +88,8 @@ Laravel documentation for learning
 </form>
 
 ```  
-  
+
+<br>
   
 ### Method field  
   
