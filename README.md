@@ -133,7 +133,6 @@ $.ajax({
 
 <br>
 ### Blade auth and guest
-<br>
 
 ```
 // EXAMPLE 1.
