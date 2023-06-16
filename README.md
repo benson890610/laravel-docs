@@ -48,6 +48,8 @@ php artisan migrate:rollback
   $table->mediumText('body')->nullable()   // MEDIUMTEXT DEFAULT NULL 'body' column
   $table->timestamps()                     // Create created_at and updated_at columns
   $table->rememberToken()                  // Create remember_token column VARCHAR(255) DEFAULT NULL
+  $table->timestamp('created_at')          // Create single 'created_at' datetime column
+  $table->foreignIdFor(App\Models\User::class, 'user_id')    // Create 'user_id' columns that has foriegin key to User::class
  
 ```
 
