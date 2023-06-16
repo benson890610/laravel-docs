@@ -17,12 +17,13 @@ php artisan server --port=8080 // http://127.0.0.1:8080
 ```  
   
   
-### Create basic controller  
+### Create controller  
   
 ```
 
 php artisan make:controller HomeController
-php artisan make:controller PostController --resource // create resource routes
+php artisan make:controller PostController --resource                         // Create controller with resource handler methods
+php artisan make:controller AlbumController --model=Album --requests --api    // Create api controller with requests api handler methods
 
 ```  
   
