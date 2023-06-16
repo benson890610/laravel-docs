@@ -6,6 +6,7 @@ Laravel documentation for learning
 
 Library: Illuminate\Http\Request
 
+<br>
 
 ### Request collect params - $request->input($param)
 
@@ -15,8 +16,8 @@ $title = $request->input('title');
 $title = $request->title;
 
 ```  
-  
-  
+
+<br>
   
 ### Request route check - $request->is($path)
 
@@ -34,6 +35,7 @@ $title = $request->title;
 
 ```
 
+<br>
 
 ### Request method - $request->method() and $request->isMethod($methodName)
 
@@ -47,7 +49,7 @@ if ( $request->isMethod('GET') ) {
 
 ```
 
-
+<br>
 
 ### Request url and fullUrl - $request->url() and $request->fullUrl()  
 
@@ -61,7 +63,17 @@ request()->fullUrl()  // http://my-site.com/page?filter=true
 
 ```
 
+<br>
 
+### Request get hostname - $request->getHost() 
+
+```
+
+request()->getHost() // https://localhost:8000
+
+```
+
+<br>
 
 ### Request check required parameters - $request->has($string) or $request->has($array)  
   
@@ -82,7 +94,8 @@ public function service(Request $request) {
 }
 
 ```  
-  
+
+<br>
   
 ### Check if request coming from route  
   
@@ -100,7 +113,7 @@ public function handle(Request $request) {
 
 ```
 
-
+<br>
 
 ### Get http request path  
 
@@ -114,7 +127,7 @@ public function handle(Request $request) {
 
 ```  
 
-
+<br>
 
 ### Get request referer header  
 
@@ -127,7 +140,7 @@ public function handle(Request $request) {
 
 ```  
 
-
+<br>
 
 ### Get request file  
 
@@ -141,7 +154,7 @@ $size     = $fileObj->getClientSize();
 
 ```  
 
-
+<br>
 
 ### Upload file  
 
