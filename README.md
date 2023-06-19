@@ -50,3 +50,26 @@ public function index() {
 }
 
 ```
+
+<br>
+
+### Return single resource from controllers 
+
+```
+
+// AlbumController.php
+
+use App\Http\Resources\AlbumResources;
+use App\Models\Album;
+
+public function show($id) {
+
+    $albums = Album::find($id);
+
+    if ( $album ) return new AlbumResource($album);
+
+    return response('', 404);
+
+}
+
+```
