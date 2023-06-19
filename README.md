@@ -6,7 +6,20 @@ Laravel documentation for learning
 ```
 
 @if ( Route::has('about') )
-    // Route has named 'about'
+    // Named route 'about' founded
 @endif 
+
+```
+
+<br>
+
+### Prefix routes 
+
+```
+
+Route::prefix('v1')->group(function() {
+    Route::get('/album', function() {  'All albums'; });          // v1/album
+    Route::get('/album/1', function() { 'Album 1 single'; });     // v1/album/1
+});
 
 ```
