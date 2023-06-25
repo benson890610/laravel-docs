@@ -138,7 +138,20 @@ public function handle(Request $request) {
     $request->headers->get('referer');
 }
 
-```  
+```
+
+<br>
+
+### Get specific request parameters (only and except)
+
+```
+
+public function handle(Request $request) {
+    $dataOnly = $request->only('username', 'password');    // Get only 'username' and 'password'
+    $dataExcepti = $request->except('created_at')          // Get all except 'created_at'
+}
+
+```
 
 <br>
 
