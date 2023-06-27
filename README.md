@@ -11,7 +11,8 @@ $dbDriver = env('DB_CONNECTION', 'mysql');           // mysql default on creatio
 $appName  = env('APP_NAME', 'Laravel Studio');       // Laravel default on creation project
 
 ```  
-  
+
+<br>
   
 ### resposne() helper in combination with json()  
   
@@ -28,6 +29,7 @@ return response()->json([
 
 ```  
 
+<br>
 
 ### method_field() helper  
   
@@ -41,6 +43,7 @@ or
 
 ```  
 
+<br>
 
 ### csrf_field() and csrf_token() helper  
 
@@ -55,7 +58,8 @@ or
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 ```
-  
+
+<br>
 
 ### config() helper  
 
@@ -67,7 +71,8 @@ config('app.name');
 config('database.connections);
 
 ```  
-  
+
+<br>
   
 ### route() helper with parameter - this helper is connected with named routes 
 
@@ -79,6 +84,7 @@ config('database.connections);
 
 ```  
 
+<br>
 
 ### base_path() helper  - this helper will return root path of project
 
@@ -88,6 +94,15 @@ echo base_path() // C:\xampp\htdocs\laravel\lsap
 
 ```  
 
+<br>
+
+### public_path() helper - this helper will return public path of project
+
+```
+
+echo public_path() // C:\xampp\htdocs\laravel\lsapp\public
+
+```
 
 ### asset() - this helper will look for files in public directory 
 
@@ -98,6 +113,7 @@ echo asset('js/app.js')   // http://lsapp.test/js/app.js
 
 ```  
 
+<br>
 
 ### old() - this helper will remember old input value and on error will display old value
 
