@@ -13,6 +13,7 @@ composer global require "laravel/installer"
 ### Namespace classes  
   
 ```
+    \Illuminate\Support\Str                // Str facade
     \Illuminate\Support\Facades\DB         // DB facade
     \Illuminate\Support\Facades\Auth       // Auth facade
     \Illuminate\Support\Facades\Hash       // Hash facade
