@@ -3,7 +3,7 @@ Laravel documentation for learning
 
 ## File handling
 
-
+<br>
 
 ### File facade  
 
@@ -12,7 +12,8 @@ Laravel documentation for learning
 Illuminate\Support\Facades\File
 
 ```  
-  
+
+<br>
   
 ### Check if file exists 
 
@@ -28,6 +29,7 @@ public function handle() {
 
 ```
 
+<br>
 
 ### Delete file or files  
 
@@ -44,6 +46,19 @@ public function handle() {
 
 ```
 
+<br>
+
+### Create directory 
+
+```
+
+$dir = public_path() . 'images/' . Str::random();
+
+File::makeDirectory($dir);
+
+```
+
+<br>
 
 ### Validate file  
 
@@ -57,6 +72,7 @@ public function handle(Request $request) {
 
 ```  
 
+<br>
 
 ### Upload file  
 
@@ -65,7 +81,7 @@ public function handle(Request $request) {
 public function handle(Request $request) {
     $file = $request->file('file')    // UploadFile instance
     
-    $filename = pathinfo($file->getClientOriginalName, PATHINFO_FILENAME);
+    $filename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
     $ext      = $file->getClientOriginalExtension();
     $formated = $filename . '_' . time() . '.' . $ext;     // Create unique file
     
