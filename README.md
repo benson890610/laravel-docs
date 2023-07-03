@@ -116,7 +116,8 @@ ServerName lsapp.test
 
 ```
 
-composer require laravel/breeze --dev
+- For laravel v.8.* run this composer require laravel/breeze:1.9.4
+- For laravel higher than v.8 composer require laravel/breeze --dev
 
 php artisan breeze:install
 npm install
