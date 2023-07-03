@@ -1,6 +1,8 @@
 # laravel-docs
 Laravel documentation for learning  
 
+<br>
+
 ### Install laravel globaly  
   
 ```
@@ -8,7 +10,8 @@ Laravel documentation for learning
 composer global require "laravel/installer"
 
 ```  
-  
+
+<br>
   
 ### Namespace classes  
   
@@ -33,7 +36,8 @@ composer global require "laravel/installer"
     \App\Post or \App\Models\Post           // Model namespace path
 
 ```
-  
+
+<br>
   
 ### Create latest version or with specific version project   
   
@@ -43,7 +47,8 @@ composer create-project laravel/laravel "5.5.*" app_name --prefer-dist
 composer create-project laravel/laravel myproject --prefer-dist v5.5.*
 
 ```
-  
+
+<br>
   
 ### Laravel commands  
   
@@ -53,8 +58,9 @@ laravel new app_name // Create new application
 laravel -v           // Check laravel installer version
 
 ```  
-  
-  
+
+<br>
+
 ### RouteServiceProvider.php  
   
 ```
@@ -75,7 +81,8 @@ public function boot() {
 }
 
 ```  
-  
+
+<br>
   
 ### Create laravel app in virtual host enviroment  
 
@@ -103,6 +110,21 @@ ServerName lsapp.test
 
 ```  
 
+<br>
+
+### Install laravel breeze login and registration
+
+```
+
+composer require laravel/breeze --dev
+
+php artisan breeze:install
+npm install
+npm run dev
+
+```
+
+<br>
 
 ### CKEditor JS  
 
