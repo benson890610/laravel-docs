@@ -13,9 +13,10 @@ List of all rules:
 5. unique:users  - request parameter must be unique in Users table e.g (email parameter)
 6. confirmed     - request parameter used in password validation, must contain password_confirmed field
 7. image         - request parameter file must be an image
-8. mimes:png,jpg - requuest file image must be png or jpg
+8. mimes:png,jpg - request file image must be png or jpg
 9. max:2048      - request when used on image, then image must be 2048 Kb
 10. exists:App\Models\Album, id - check if passed value exists as id in Album model
+11. url          - request parameter must be of type URL
 
 ```
 
