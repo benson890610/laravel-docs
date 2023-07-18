@@ -25,7 +25,7 @@ $title = $request->title;
 
 // layouts.blade.php 
 
-@if ( request()->is('about')
+@if ( request()->is('about') )
     <div>Welcome to about page</div>
 @endif
 
