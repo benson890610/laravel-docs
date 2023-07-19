@@ -21,8 +21,9 @@ public function deleteToken(PersonalAccessToken $token) {  // Delete token
 
 }
 
-$tokenName = $token->name
-$tokenRandChars = $token->last_used_at->diffForHumans()
+$tokenId   = $token->id                                  // Token id in 'personal_access_token' table
+$tokenName = $token->name                                // Token name
+$tokenRandChars = $token->last_used_at->diffForHumans()  // Token last used at eg. 2 hours ago
 
 Route::middleware('auth:sanctum')->group(function() {      // Authenticate every route by token
     Route::prefix('v1')->group(function() {
