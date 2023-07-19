@@ -134,7 +134,21 @@ $.ajax({
     @endforeach
 @endif 
 
-```  
+```
+
+<br>
+
+### Blade error directive
+
+```
+
+@error('title')
+
+<span class="text-red-500">{{ $message }}</span>
+
+@enderror
+
+```
 
 <br>
 
