@@ -5,6 +5,8 @@ Laravel documentation for learning
 
 Library: Illuminate\Support\Facades\Session
 
+<br>
+
 ### Create session  
 
 ```
@@ -12,8 +14,11 @@ Library: Illuminate\Support\Facades\Session
 Session::flash('success', 'New user added');
 session()->flash('success', 'New user added');
 
+Session::put('name', 'value')
+
 ```
 
+<br>
 
 ### Check for session  
 
@@ -33,6 +38,7 @@ if ( session()->has('success') ) {
 
 ```  
 
+<br>
 
 ### Get session value  
 
@@ -43,4 +49,17 @@ $value = session()->get('success);
 $value = session('success');
 
 ```
- 
+
+<br>
+
+### Remove session  
+
+```
+
+Session::forget('name');
+
+$request->session()->forget('name');
+
+session()->forget('name');
+
+```
