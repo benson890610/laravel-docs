@@ -44,6 +44,21 @@ public function login() {
 
 <br>
 
+### Change unauthenticated redirect route
+```
+
+    In App\Http\Middleware\Authenticate.php change route parameter to specific route
+
+    protected function redirectTo($request) {
+        if (! $request->expectsJson()) {
+            return route('home.index');
+        }
+    }
+
+```
+
+<br>
+
 ### Change authenticated redirect route  
 ```
 
