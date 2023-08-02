@@ -79,7 +79,8 @@ public function login() {
 
     In Laravel 8, you can easily redirect unauthenticated users to a specific route using middleware.
     By default, Laravel provides a guest middleware that handles this redirection.
-    However, you can create a custom middleware to customize the behavior and redirect unauthenticated users to your desired route.
+    However, you can create a custom middleware to customize the behavior and redirect
+    unauthenticated users to your desired route.
 
     Create a new middleware using the following Artisan command:
 
@@ -99,7 +100,8 @@ public function login() {
         return $next($request);
     }
 
-    Register the middleware in the $routeMiddleware array in the app/Http/Kernel.php file. Add the following line to the array:
+    Register the middleware in the $routeMiddleware array in the app/Http/Kernel.php file.
+    Add the following line to the array:
 
     protected $routeMiddleware = [
         // ...
@@ -107,7 +109,8 @@ public function login() {
     ];
 
     Now, you can apply the middleware to the routes that you want to protect from unauthenticated access.
-    Open the web.php routes file (located at routes/web.php) and add the middleware to the desired route group or individual routes:
+    Open the web.php routes file (located at routes/web.php) and add the middleware
+    to the desired route group or individual routes:
 
     use App\Http\Middleware\RedirectUnauthenticated;
 
@@ -124,6 +127,7 @@ public function login() {
     })->middleware(RedirectUnauthenticated::class);
 
     With this setup, any unauthenticated user trying to access the routes that use the RedirectUnauthenticated middleware
-    will be redirected to the specified route (e.g., /login). Remember to replace /login with the actual route you want to use for unauthenticated users.
+    will be redirected to the specified route (e.g., /login).
+    Remember to replace /login with the actual route you want to use for unauthenticated users.
 
 ```
