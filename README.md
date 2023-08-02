@@ -5,6 +5,29 @@ Laravel documentation for learning
 
 <br>
 
+### Theory
+```
+
+    Illuminate\Support\Facades\Auth is the main facade where authenticated or guest
+    are manipulated.
+
+    Retreiving authenticated user
+
+    $user = Auth::user();
+
+    Retreive authenticated user id
+
+    Auth::id()
+    Auth::user()->id
+
+    To check if user is logged
+
+    Auth::check()
+
+```
+
+<br>
+
 ### Check if user is logged  
 ```
 
