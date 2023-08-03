@@ -39,7 +39,8 @@ Laravel documentation for learning
 
     Redirecting Unauthenticated Users
     When the auth middleware detects an unauthenticated user, it will redirect the user to the login named route.
-    You may modify this behavior by updating the redirectTo function in your application's app/Http/Middleware/Authenticate.php file
+    You may modify this behavior by updating the redirectTo function in your application's
+    app/Http/Middleware/Authenticate.php file
 
 
     protected function redirectTo($request) {
