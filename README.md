@@ -8,38 +8,43 @@ Laravel documentation for learning
 ### Theory
 ```
 
-    Illuminate\Support\Facades\Auth is the main facade where authenticated or guest
-    are manipulated.
+    Illuminate\Support\Facades\Auth is the main facade where authenticated or guest are manipulated.
 
     Retreiving authenticated user
+    While handling an incoming request, you may access the authenticated user via the Auth facade's user method
+
 
     $user = Auth::user();
+    $id   = Auth::id()
+    $id   = Auth::user()->id
 
-    Retreive authenticated user id
 
-    Auth::id()
-    Auth::user()->id
+    Alternatively, once a user is authenticated, you may access the authenticated user via an Illuminate\Http\Request instance.
+    Remember, type-hinted classes will automatically be injected into your controller methods.
+    By type-hinting the Illuminate\Http\Request object, you may gain convenient access to the authenticated user from any
+    controller method in your application via the request's user method
 
-    To check if user is logged
+
+    public function update(Request $request) {
+        // $request->user()
+    }
+
+    
+    To determine if the user making the incoming HTTP request is authenticated,
+    you may use the check method on the Auth facade. This method will return true if the user is authenticated
+
 
     Auth::check()
 
-```
 
-<br>
+    Redirecting Unauthenticated Users
+    When the auth middleware detects an unauthenticated user, it will redirect the user to the login named route.
+    You may modify this behavior by updating the redirectTo function in your application's app/Http/Middleware/Authenticate.php file
 
-### Check if user is logged  
-```
 
-use Illuminate\Support\Facades\Auth;
-
-public function doSomething() {
-    if ( Auth::check() ) {
-    	// OK continue
-    } else {
-    	// Abort redirect
+    protected function redirectTo($request) {
+        return route('login');
     }
-} 
 
 ```
 
