@@ -1,15 +1,31 @@
 # laravel-docs
 Laravel documentation for learning  
-  
+
+<br>
   
 ## Middleware  
   
-  
+<br>
+
+### Theory
+```
+
+Middleware provide a convenient mechanism for inspecting and filtering HTTP requests entering your application.
+For example, Laravel includes a middleware that verifies the user of your application is authenticated.
+If the user is not authenticated, the middleware will redirect the user to your application's login screen.
+However, if the user is authenticated, the middleware will allow the request to proceed further into the application.
+
+Global Middleware.
+If you want a middleware to run during every HTTP request to your application,
+list the middleware class in the $middleware property of your app/Http/Kernel.php class.
+
+```
+
+<br>
 
 ### Create middleware  
   
 ```
-
 php artisan make:middleware CheckAge
 
 // app/Http/Middleware/CheckAge.php 
@@ -40,9 +56,9 @@ Route::get('adult', function() { 'Adult page'; })->middleware('checkAge');
 
 ```  
 
+<br>
 
 ### Middleware inside constructor  
-
 ```
 
 class PostsController extends Controller {
@@ -63,9 +79,9 @@ class PostsController extends Controller {
 
 ```
 
+<br>
 
 ### Middleware inside constructor with except option  
-
 ```
 
 use Illuminate\Http\Request;
