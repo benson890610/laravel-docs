@@ -2,6 +2,7 @@
 Laravel documentation for learning  
 
 ## Laravel Santcum
+composer require laravel/sanctum
 
 <br>
 
