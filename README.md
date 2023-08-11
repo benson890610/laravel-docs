@@ -17,6 +17,7 @@ List of all rules:
 9. max:2048      - request when used on image, then image must be 2048 Kb
 10. exists:App\Models\Album, id - check if passed value exists as id in Album model
 11. url          - request parameter must be of type URL
+12. numeric      - request parameter must be integer or decimal number
 
 ```
 
