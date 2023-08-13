@@ -6,18 +6,19 @@ Laravel documentation for learning
 Laravel validation is done with Illuminate\Http\Request library that is pased into controller method as dependecy.  
 If one of the validation rules fail it will trigger redirection with proper status code.  
 List of all rules:  
-1. required      - request data must be filled 
-2. max:255       - request data must contain maximum 255 characters
-3. email         - request data email must be of correct type
-4. min:6         - request data must contain minimum 6 characters
-5. unique:users  - request parameter must be unique in Users table e.g (email parameter)
-6. confirmed     - request parameter used in password validation, must contain password_confirmation field
-7. image         - request parameter file must be an image
-8. mimes:png,jpg - request file image must be png or jpg
-9. max:2048      - request when used on image, then image must be 2048 Kb
-10. exists:App\Models\Album, id - check if passed value exists as id in Album model
-11. url          - request parameter must be of type URL
-12. numeric      - request parameter must be integer or decimal number
+1. required           - request data must be filled 
+2. max:255            - request data must contain maximum 255 characters
+3. email              - request data email must be of correct type
+4. min:6              - request data must contain minimum 6 characters
+5. unique:users       - request parameter must be unique in Users table e.g (email parameter)
+6. unique:users,email - request parameter must be unique in Users table on email column
+7. confirmed          - request parameter used in password validation, must contain password_confirmation field
+8. image              - request parameter file must be an image
+9. mimes:png,jpg      - request file image must be png or jpg
+10. max:2048          - request when used on image, then image must be 2048 Kb
+11. exists:App\Models\Album, id - check if passed value exists as id in Album model
+12. url               - request parameter must be of type URL
+13. numeric           - request parameter must be integer or decimal number
 
 ```
 
