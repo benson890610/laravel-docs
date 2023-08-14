@@ -38,6 +38,7 @@ Laravel documentation for learning
 
 
     Redirecting Unauthenticated Users
+    -----------------------------------------------------------------------------------------------------
     When the auth middleware detects an unauthenticated user, it will redirect the user to the login named route.
     You may modify this behavior by updating the redirectTo function in your application's
     app/Http/Middleware/Authenticate.php file
@@ -45,6 +46,36 @@ Laravel documentation for learning
 
     protected function redirectTo($request) {
         return route('login');
+    }
+
+
+    Remembering Users
+    -----------------------------------------------------------------------------------------------------
+    Many web applications provide a "remember me" checkbox on their login form.
+    If you would like to provide "remember me" functionality in your application,
+    you may pass a boolean value as the second argument to the attempt method.
+
+    When this value is true, Laravel will keep the user authenticated indefinitely or until they
+    manually logout. Your users table must include the string remember_token column, which will be
+    used to store the "remember me" token.
+    The users table migration included with new Laravel applications already includes this column:
+
+
+    use Illuminate\Support\Facades\Auth;
+ 
+    if (Auth::attempt(['email' => $email, 'password' => $password], $remember)) {
+        // The user is being remembered...
+    }
+
+
+    If your application offers "remember me" functionality, you may use the viaRemember method
+    to determine if the currently authenticated user was authenticated using the "remember me" cookie:
+
+
+    use Illuminate\Support\Facades\Auth;
+     
+    if (Auth::viaRemember()) {
+        // ...
     }
 
 ```
