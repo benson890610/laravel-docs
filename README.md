@@ -42,4 +42,11 @@ Route::middleware('auth:sanctum')->group(function() {      // Authenticate every
     });
 });
 
+Delete Tokens
+---------------------------------------------------------------------------------------------------
+
+$user = Auth::user();
+$user->tokens->each->delete();
+return new JsonResponse(['message' => 'Logged out success']);
+
 ```
