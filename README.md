@@ -30,6 +30,7 @@ composer global require "laravel/installer"
     
     \Illuminate\Http\Request                // Incoming request
     \Illuminate\Http\JsonResponse           // Return response in JSON format
+    \Illuminate\Http\UploadedFile           // Uploaded file instance used for uploaded files
     
     \App\Http\Controllers\MyController;     // Controller namespace path
     
